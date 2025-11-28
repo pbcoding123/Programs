@@ -8,12 +8,12 @@ header = {
 
 dr = webdriver.Chrome()
 urlList = []
-with open("url.txt", "r", encoding="utf-8") as f:
+with open(".\\url.txt", "r", encoding="utf-8") as f:
     urlList = f.read().split("\n")
 
 print(urlList)
 
-f = open("requests.txt", "w", encoding="utf-8")
+f = open(".\\requests.txt", "w", encoding="utf-8")
 
 for url in urlList:
     dr.get("https://www.luogu.com.cn/paste/"+url)
